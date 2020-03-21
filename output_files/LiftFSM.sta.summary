@@ -1,0 +1,101 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'qEmpty'
+Slack : -3.690
+TNS   : -3.690
+
+Type  : Slow 1100mV 85C Model Setup 'clk'
+Slack : -3.381
+TNS   : -33.652
+
+Type  : Slow 1100mV 85C Model Hold 'clk'
+Slack : 0.310
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'qEmpty'
+Slack : 1.602
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.724
+TNS   : -11.164
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'qEmpty'
+Slack : 0.438
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'qEmpty'
+Slack : -3.644
+TNS   : -3.644
+
+Type  : Slow 1100mV 0C Model Setup 'clk'
+Slack : -3.120
+TNS   : -31.058
+
+Type  : Slow 1100mV 0C Model Hold 'clk'
+Slack : 0.300
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'qEmpty'
+Slack : 1.613
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.724
+TNS   : -11.230
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'qEmpty'
+Slack : 0.387
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'clk'
+Slack : -1.123
+TNS   : -11.120
+
+Type  : Fast 1100mV 85C Model Setup 'qEmpty'
+Slack : -1.022
+TNS   : -1.022
+
+Type  : Fast 1100mV 85C Model Hold 'clk'
+Slack : 0.144
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'qEmpty'
+Slack : 0.721
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.082
+TNS   : -0.816
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'qEmpty'
+Slack : 0.125
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'qEmpty'
+Slack : -0.863
+TNS   : -0.863
+
+Type  : Fast 1100mV 0C Model Setup 'clk'
+Slack : -0.839
+TNS   : -8.320
+
+Type  : Fast 1100mV 0C Model Hold 'clk'
+Slack : 0.131
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'qEmpty'
+Slack : 0.656
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.082
+TNS   : -0.816
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'qEmpty'
+Slack : 0.107
+TNS   : 0.000
+
+------------------------------------------------------------

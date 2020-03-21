@@ -1,0 +1,79 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/zhang/Desktop/ece510project1/simulation/modelsim
+vInputBuffer
+Z1 !s110 1584549281
+!i10b 1
+!s100 4DYFJ63aL?>QDRUE0GfnM3
+Io1b?6O5GTXeGz5Emfh[CN1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1584535762
+8C:/Users/zhang/Desktop/ece510project1/InputBuffer.v
+FC:/Users/zhang/Desktop/ece510project1/InputBuffer.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1584549281.000000
+Z5 !s107 C:/Users/zhang/Desktop/ece510project1/LiftFSM.v|C:/Users/zhang/Desktop/ece510project1/InputBuffer.v|C:/Users/zhang/Desktop/ece510project1/TestBench.vt|
+Z6 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/zhang/Desktop/ece510project1|C:/Users/zhang/Desktop/ece510project1/TestBench.vt|
+!i113 1
+Z7 o-vlog01compat -work work
+Z8 !s92 -vlog01compat -work work +incdir+C:/Users/zhang/Desktop/ece510project1
+Z9 tCvgOpt 0
+n@input@buffer
+vLiftFSM
+R1
+!i10b 1
+!s100 o@n4nebYKESaCFgfWlQmE0
+I_foOb25l;T:^:Dikaz7@S0
+R2
+R0
+w1584542756
+8C:/Users/zhang/Desktop/ece510project1/LiftFSM.v
+FC:/Users/zhang/Desktop/ece510project1/LiftFSM.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+R8
+R9
+n@lift@f@s@m
+vTestBench
+R1
+!i10b 1
+!s100 `VnEcWXl>;fMzcAOkLnTe0
+IfR^Pf9nIiWRF=TIco:1:C3
+R2
+R0
+w1584549269
+8C:/Users/zhang/Desktop/ece510project1/TestBench.vt
+FC:/Users/zhang/Desktop/ece510project1/TestBench.vt
+L0 4
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+R8
+R9
+n@test@bench

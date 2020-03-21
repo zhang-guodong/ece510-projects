@@ -1,0 +1,13 @@
+
+State Machine - |LiftFSM|ps
+Name ps.s43 ps.s32 ps.s21 ps.s34 ps.s23 ps.s12 ps.s4 ps.s3 ps.s2 ps.s1 
+ps.s1 0 0 0 0 0 0 0 0 0 0 
+ps.s2 0 0 0 0 0 0 0 0 1 1 
+ps.s3 0 0 0 0 0 0 0 1 0 1 
+ps.s4 0 0 0 0 0 0 1 0 0 1 
+ps.s12 0 0 0 0 0 1 0 0 0 1 
+ps.s23 0 0 0 0 1 0 0 0 0 1 
+ps.s34 0 0 0 1 0 0 0 0 0 1 
+ps.s21 0 0 1 0 0 0 0 0 0 1 
+ps.s32 0 1 0 0 0 0 0 0 0 1 
+ps.s43 1 0 0 0 0 0 0 0 0 1 

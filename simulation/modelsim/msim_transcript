@@ -1,0 +1,54 @@
+# Reading C:/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
+# do LiftFSM_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/zhang/Desktop/ece510project1 {C:/Users/zhang/Desktop/ece510project1/LiftFSM.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:34:41 on Mar 19,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zhang/Desktop/ece510project1" C:/Users/zhang/Desktop/ece510project1/LiftFSM.v 
+# -- Compiling module LiftFSM
+# 
+# Top level modules:
+# 	LiftFSM
+# End time: 00:34:41 on Mar 19,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/zhang/Desktop/ece510project1 {C:/Users/zhang/Desktop/ece510project1/TestBench.vt}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:34:41 on Mar 19,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/zhang/Desktop/ece510project1" C:/Users/zhang/Desktop/ece510project1/TestBench.vt 
+# -- Compiling module InputBuffer
+# -- Compiling module LiftFSM
+# -- Compiling module TestBench
+# 
+# Top level modules:
+# 	TestBench
+# End time: 00:34:41 on Mar 19,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  TestBench
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" TestBench 
+# Start time: 00:34:41 on Mar 19,2020
+# Loading work.TestBench
+# Loading work.InputBuffer
+# Loading work.LiftFSM
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Testbench finished.
+# Break key hit
+# Break in Module TestBench at C:/Users/zhang/Desktop/ece510project1/TestBench.vt line 51
+# End time: 01:10:51 on Mar 19,2020, Elapsed time: 0:36:10
+# Errors: 0, Warnings: 0

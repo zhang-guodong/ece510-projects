@@ -1,0 +1,49 @@
+`timescale 1 ns/ 1 ns
+`include "InputBuffer.v"
+`include "LiftFSM.v"
+module TestBench();
+//input
+reg clk;
+//reg rst;
+reg d2;
+reg d3;
+reg d4;
+reg u1;
+reg u2;
+reg u3;
+
+
+
+
+//output
+wire [1:0] out;
+//connection
+wire done;
+wire qEmpty;
+wire [2:0] button;
+
+InputBuffer i1 (clk,u1,u2,u3,d2,d3,d4,done,button,qEmpty);
+LiftFSM l1 (clk,button,qEmpty,out,done);
+
+
+initial                                                
+begin                                                  
+	clk=0;	
+	
+//	#50	d2=1;	d3=1;
+//	#100 	d2=0;	d3=0;
+	#50 	u2=1;
+	#100 	u2=0;
+//	#300 	u1=1;
+//	#100 	u1=0;
+	#100	d4=1;
+	#100	d4=0;
+	#700	d2=1;
+	#300	d2=0;
+$display("Testbench finished.");                       
+end 
+
+
+always #100 clk=~clk;
+
+endmodule

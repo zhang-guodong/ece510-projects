@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at LiftFSM.v(27): always construct contains both blocking and non-blocking assignments File: C:/Users/zhang/Desktop/ece510project1/LiftFSM.v Line: 27

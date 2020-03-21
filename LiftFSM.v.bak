@@ -1,0 +1,161 @@
+module LiftFSM(clk,in,qEmpty,out,done);
+
+	input clk;
+	input [2:0] in;
+	input qEmpty;
+	output [1:0] out;
+	output done;
+
+	reg [1:0] out;
+	reg done;
+	
+	reg [3:0] ps;		//present state
+	reg [3:0] ns;		//next state
+	
+	parameter s1=4'b0,s2=4'b1,s3=4'b10,s4=4'b11;
+	parameter s12=4'b0100,s23=4'b0101,s34=4'b0110;
+	parameter s21=4'b1000,s32=4'b1001,s43=4'b1010;
+	
+	parameter UP=2'b01,DOWN=2'b10,STAY=2'b00;
+	
+	initial begin
+		ps=s1;
+		ns=s1;
+		out=2'b0;		
+	end
+
+	always @ (ps or in or qEmpty) begin
+		
+		if(qEmpty && done) begin
+			ns=ps;	out<=STAY;
+		end else begin
+			case (ps)
+			s1: begin
+				case (in)
+				3'b1: begin		//1u
+					ns=s2;	out=UP;		done=1;
+				end
+				3'b10: begin	//2u
+					ns=s23;	out=UP;		done=0;
+				end
+				3'b11: begin	//3d
+					ns=s34;	out=UP;		done=0;
+				end
+				3'b100: begin	//2d
+					ns=s21;	out=UP;		done=0;
+				end
+				3'b101: begin	//3d
+					ns=s32;	out=UP;		done=0;
+				end
+				3'b110: begin	//4d
+					ns=s43;	out=UP;		done=0;
+				end
+				default: begin	//invalid input
+					ns=s1;	out=STAY;	done=1;	
+				end
+				endcase
+			end
+			s2: begin
+				case (in)
+				3'b1: begin		//1u
+					ns=s12;	out=DOWN;	done=0;
+				end
+				3'b10: begin	//2u
+					ns=s3;	out=UP;		done=1;
+				end
+				3'b11: begin	//3d
+					ns=s34;	out=UP;		done=0;
+				end
+				3'b100: begin	//2d
+					ns=s1;	out=DOWN;	done=1;
+				end
+				3'b101: begin	//3d
+					ns=s32;	out=UP;		done=0;
+				end
+				3'b110: begin	//4d
+					ns=s43;	out=UP;		done=0;
+				end
+				default: begin	//invalid input
+					ns=s2;	out=STAY;	done=1;
+				end
+				endcase
+			end
+			s3: begin
+				case (in)
+				3'b1: begin		//1u
+					ns=s12;	out=DOWN;	done=0;
+				end
+				3'b10: begin	//2u
+					ns=s23;	out=DOWN;	done=0;
+				end
+				3'b11: begin	//3d
+					ns=s4;	out=UP;		done=1;
+				end
+				3'b100: begin	//2d
+					ns=s21;	out=DOWN;	done=0;
+				end
+				3'b101: begin	//3d
+					ns=s2;	out=DOWN;	done=1;
+				end
+				3'b110: begin	//4d
+					ns=s43;	out=UP;		done=0;
+				end
+				default: begin	//invalid input
+					ns=s3;	out=STAY;	done=1;
+				end
+				endcase
+			end
+			s4: begin
+				case (in)
+				3'b1: begin		//1u
+					ns=s12;	out=DOWN;	done=0;
+				end
+				3'b10: begin	//2u
+					ns=s23;	out=DOWN;	done=0;
+				end
+				3'b11: begin	//3d
+					ns=s34;	out=DOWN;	done=0;
+				end
+				3'b100: begin	//2d
+					ns=s21;	out=DOWN;	done=0;
+				end
+				3'b101: begin	//3d
+					ns=s32;	out=DOWN;	done=0;
+				end
+				3'b110: begin	//4d
+					ns=s3;	out=DOWN;	done=1;
+				end
+				default: begin	//invalid input
+					ns=s4;	out=STAY;	done=1;
+				end
+				endcase
+			end
+			s12: begin
+				ns=s2;	out=UP;		done=1;
+			end
+			s23: begin
+				ns=s3;	out=UP;		done=1;
+			end
+			s34: begin
+				ns=s4;	out=UP;		done=1;
+			end
+			s21: begin
+				ns=s1;	out=DOWN;	done=1;
+			end
+			s32: begin
+				ns=s2;	out=DOWN;	done=1;
+			end
+			s43: begin
+				ns=s3;	out=DOWN;	done=1;
+			end
+			endcase
+		end
+	end
+	
+	always @ (posedge clk) begin
+		ps<=ns;
+	end
+		
+//	assign done=(ps==s1)||(ps==s2)||(ps==s3)||(ps==s4);
+		
+endmodule
